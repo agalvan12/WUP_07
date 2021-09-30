@@ -44,7 +44,7 @@ barchartGC(~result + Sex,data=kRdata, type="percent")
 
 ```
 
-  
+In the first plot, it shows that the amount of people who died is not that great compared to the amount of people who are still alive. We can see that by looking at both plots. In the second plot, it shows that the percentage of females who are alive is more than the percentage of males that are alive. As for the dead, it shows that the percentage of males that are dead is about twice as higher as the percentage of females that are dead.
 
 
 
