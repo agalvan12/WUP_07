@@ -81,11 +81,11 @@ The chi sq test provides the exact numbers. It shows that 1831 were females and 
 
 
 
-
 ```{r}
 fisher.test(table1)
 ```
 
+The fisher test gives us the odd ratio, which we also got by doing the chi sq test. We also see the confidence intervals are 1.4 to 3.9, meaning the odd ratio can go as low as 1.4 or as high as 3.9. 
 
 ## Conclusions
 
