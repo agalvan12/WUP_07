@@ -14,6 +14,10 @@ require(tidyverse)
 require(tigerstats)
 require(lubridate)
 kRdata <- read.csv(file = 'kRdata.csv')
+kRdata$state<-as.factor(kRdata$state)
+kRdata$result<-as.factor(kRdata$result)
+kRdata$sex<-as.factor(kRdata$sex)
+kRdata$Sex<-as.factor(kRdata$Sex)
 ```
 ### Data is from the Patient_Info dataset from South Korea 1 Jan to 1 May 
 ### This is contained in a downloadable zip file from kaggle
@@ -40,11 +44,16 @@ with(kRdata, table(Sex, result))
 
 ```{r}
 barchartGC(~result + Sex,data=kRdata)
-barchartGC(~result + Sex,data=kRdata, type="percent")
-
 ```
 
-In the first plot, it shows that the amount of people who died is not that great compared to the amount of people who are still alive. We can see that by looking at both plots. In the second plot, it shows that the percentage of females who are alive is more than the percentage of males that are alive. As for the dead, it shows that the percentage of males that are dead is about twice as higher as the percentage of females that are dead.
+In this boxplot, we can see that more women are alive than men. Women are more prominent than men. The amount of women and men that died does not substantial. All and all, there were more men that died compared to women. 
+
+
+```{r}
+barchartGC(~result + Sex,data=kRdata, type="percent")
+```
+
+In the second plot, it shows that the percentage of females who are alive is more than the percentage of males that are alive. As for the dead, it shows that the percentage of males that are dead is about twice as higher as the percentage of females that are dead.
 
 
 
